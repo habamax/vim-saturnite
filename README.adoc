@@ -7,7 +7,7 @@
 
 Dark vim colorscheme for the Saturday nights and other *day nights.
 
-There is also https://github.com/habamax/vim-freyeday[Light vim colorscheme for the Friday and other *days.].
+There is also https://github.com/habamax/vim-freyeday[Light vim colorscheme for the Friday and other *days].
 
 
 == Screens
