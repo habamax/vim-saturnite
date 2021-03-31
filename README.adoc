@@ -1,0 +1,83 @@
+= Saturnite: Dark vim colorscheme
+:experimental:
+:icons: font
+:autofit-option:
+:!source-linenums-option:
+:imagesdir: images
+
+Dark vim colorscheme for the Saturday nights and other *day nights.
+
+There is also https://github.com/habamax/vim-freyeday[Light vim colorscheme for the Friday and other *days.].
+
+
+== Screens
+
+image::https://user-images.githubusercontent.com/234774/113099505-ba698700-9202-11eb-969b-3042cb5e2497.png[]
+
+image::https://user-images.githubusercontent.com/234774/113099947-69a65e00-9203-11eb-9d0e-4294232162bb.png[]
+
+image::https://user-images.githubusercontent.com/234774/113100485-28fb1480-9204-11eb-99a4-c89243d78e7f.png[]
+
+
+
+== Installation
+
+Follow the instructions plugin manager of choice has.
+
+Or simply put `saturnite.vim` into your `~/.vim/colors/` folder.
+
+
+== Looks good but I want italic comments
+
+Add following to your settings file:
+
+[source,vim]
+------------------------------------------------------------------------------
+
+augroup colorscheme_change | au!
+    au ColorScheme saturnite hi Comment gui=italic cterm=italic
+augroup END
+
+colorscheme saturnite
+
+------------------------------------------------------------------------------
+
+
+== And bold statements
+
+Add following to your settings file:
+
+[source,vim]
+------------------------------------------------------------------------------
+
+func! s:saturnite_setup() abort
+    hi Comment gui=italic cterm=italic
+    hi Statement gui=bold cterm=bold
+endfunc
+
+augroup colorscheme_change | au!
+    au ColorScheme saturnite call s:saturnite_setup()
+augroup END
+
+colorscheme saturnite
+
+------------------------------------------------------------------------------
+
+== And VertSplit without background colors
+
+[source,vim]
+------------------------------------------------------------------------------
+
+func! s:saturnite_setup() abort
+    hi Comment gui=italic cterm=italic
+    hi Statement gui=bold cterm=bold
+    hi VertSplit guibg=NONE ctermbg=NONE
+endfunc
+
+augroup colorscheme_change | au!
+    au ColorScheme saturnite call s:saturnite_setup()
+augroup END
+
+colorscheme saturnite
+
+------------------------------------------------------------------------------
