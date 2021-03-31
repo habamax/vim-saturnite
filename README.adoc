@@ -7,6 +7,8 @@
 
 Dark vim colorscheme for the Saturday nights and other *day nights.
 
+The variation of the beautiful https://github.com/romainl/Apprentice[Apprentice] made by https://github.com/romainl[Romain Lafourcade].
+
 There is also https://github.com/habamax/vim-freyeday[Light vim colorscheme for the Friday and other *days].
 
 
