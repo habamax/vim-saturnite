@@ -83,3 +83,19 @@ augroup END
 colorscheme saturnite
 
 ------------------------------------------------------------------------------
+
+
+== I want my terminal background
+
+If you would like NOT to override your terminal background color -- make `Normal` background `NONE`:
+
+[source,vim]
+------------------------------------------------------------------------------
+
+augroup colorscheme_change | au!
+    au ColorScheme saturnite hi Normal ctermbg=NONE
+augroup END
+
+colorscheme saturnite
+
+------------------------------------------------------------------------------
