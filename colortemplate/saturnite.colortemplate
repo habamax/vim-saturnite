@@ -126,7 +126,7 @@ SpecialChar      color05    none
 Tag              color14    none
 SpecialComment   color14    none
 
-Directory        color15    none bold
+Directory        color04    none bold
 Conceal          color07    none
 Ignore           none       none
 
