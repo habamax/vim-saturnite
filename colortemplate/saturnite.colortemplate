@@ -61,8 +61,8 @@ VertSplit        color08    color08
 
 Pmenu            none       color08
 PmenuSel         background color11
-PmenuSbar        none       color08
-PmenuThumb       none       color08
+PmenuSbar        none       color07
+PmenuThumb       none       color15
 
 TabLine          foreground color08
 TabLineFill      color06    color08
