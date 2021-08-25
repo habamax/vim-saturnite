@@ -77,13 +77,13 @@ SpecialKey       color08    none
 Folded           color07    color00
 Visual           background color12
 VisualNOS        background color12
-LineNr           color07    none
+LineNr           color07    color00
 FoldColumn       color07    color00
 CursorLine       none       color16
 CursorColumn     none       color16
-CursorLineNr     none       color16
+CursorLineNr     none       color00
 QuickFixLine     none       color16
-SignColumn       none       none
+SignColumn       none       color00
 
 Underlined       color11    none underline
 
