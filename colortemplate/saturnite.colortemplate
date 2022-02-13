@@ -39,6 +39,7 @@ Color: color07    #6C6C6C 242
 Color: color15    #EEEEEE 255
 
 Color: color16    #3A3A3A 237
+Color: colorC     #FFAF5F 215
 
 Color: colorDiffA #29322B 235
 Color: colorDiffC #303030 235
@@ -81,7 +82,7 @@ LineNr           color07    none
 FoldColumn       color07    none
 CursorLine       none       color16
 CursorColumn     none       color16
-CursorLineNr     none       color16
+CursorLineNr     colorC     none                 bold
 QuickFixLine     none       color16
 SignColumn       none       none
 
@@ -100,7 +101,7 @@ Search           color00    color02
 IncSearch        color00    color11
 WildMenu         background color11
 ColorColumn      none       color00
-Cursor           background foreground
+Cursor           color00    colorC
 lCursor          background color01
 
 DiffAdd          none       colorDiffA
