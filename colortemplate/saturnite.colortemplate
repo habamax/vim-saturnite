@@ -44,6 +44,7 @@ Color: colorC     #FFAF5F 215
 Color: colorDiffA #29322B 235
 Color: colorDiffC #303030 235
 Color: colorDiffD #322B29 235
+Color: colorCom   #87875f 101
 
 Term colors: color00 color01 color02 color03 color04 color05 color06 color07
 Term colors: color08 color09 color10 color11 color12 color13 color14 color15
@@ -95,7 +96,7 @@ WarningMsg       color03    none
 MoreMsg          color10    none
 Question         color09    none
 
-Todo             color07    background reverse
+Todo             color03    background reverse
 MatchParen       color00    color03
 Search           color00    color02
 IncSearch        color00    color11
@@ -116,7 +117,7 @@ SpellRare        color11    none t=underline g=undercurl s=color11
 
 
 ;;; :h group-names
-Comment          color07    none
+Comment          colorCom   none
 
 Identifier       color13    none
 Function         color11    none
