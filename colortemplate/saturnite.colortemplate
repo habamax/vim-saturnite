@@ -1,54 +1,79 @@
-Full name: saturnite
-Short name: saturnite
+Full name:   saturnite
+Short name:  saturnite
 Description: Dark vim colorscheme for the Saturday nights and other *day nights.
-Author: Maxim Kim <habamax@gmail.com>
-Neovim: yes
-
-
-Variant:    gui 256
+Author:      Maxim Kim <habamax@gmail.com>
+URL:         https://github.com/habamax/vim-saturnite
+Options:     backend=vim
 
 Background: dark
 
+Color: foreground   #BCBCBC 250 black
+Color: background   #1C1C1C 234 darkgray
 
-;;; Color palette
-Color: foreground #BCBCBC 250
-Color: background #1C1C1C 234
+Color: color00      #121212 233 black
+Color: color08      #444444 238 darkgray
 
-Color: color00    #121212 233
-Color: color08    #444444 238
+Color: color01      #AF5F5F 131 darkred
+Color: color09      #D7875F 173 red
 
-Color: color01    #AF5F5F 131
-Color: color09    #D7875F 173
+Color: color02      #5F875F 65  darkgreen
+Color: color10      #87AF87 108 green
 
-Color: color02    #5F875F 65
-Color: color10    #87AF87 108
+Color: color03      #AF8700 136 darkyellow
+Color: color11      #D7AF5F 179 yellow
 
-Color: color03    #AF8700 136
-Color: color11    #D7AF5F 179
+Color: color04      #5F87AF 67  darkblue
+Color: color12      #87AFD7 110 blue
 
-Color: color04    #5F87AF 67
-Color: color12    #87AFD7 110
+Color: color05      #5F5F87 60  darkmagenta
+Color: color13      #8787AF 103 magenta
 
-Color: color05    #5F5F87 60
-Color: color13    #8787AF 103
+Color: color06      #5F8787 66  darkcyan
+Color: color14      #5FAFAF 73  cyan
 
-Color: color06    #5F8787 66
-Color: color14    #5FAFAF 73
+Color: color07      #6C6C6C 242 gray
+Color: color15      #EEEEEE 255 white
 
-Color: color07    #6C6C6C 242
-Color: color15    #EEEEEE 255
+Color: color16      #3A3A3A 237 darkgray
+Color: colorC       #FFAF5F 215 red
 
-Color: color16    #3A3A3A 237
-Color: colorC     #FFAF5F 215
+Color: colorDiffA   #29322B 235 darkgreen
+Color: colorDiffC   #303030 235 darkred
+Color: colorDiffD   #322B29 235 darkyellow
+Color: colorCom     #87875f 101 darkcyan
 
-Color: colorDiffA #29322B 235
-Color: colorDiffC #303030 235
-Color: colorDiffD #322B29 235
-Color: colorCom   #87875f 101
+Color: Added        #5fd75f 77  darkgreen
+Color: Changed      #ffaf5f 215 darkyellow
+Color: Removed      #d75f5f 167 darkred
+
+Color: colorTitle   #3c3c3c 237 black
+Color: colorTitleNC #2c2c2c 236 black
+
+Color: colorMP      #ff00af 199 magenta
+Color: colorV       #1a3456 110 cyan
+Color: colorSrch    #374a44 65  green
+Color: colorInc     #5a4a45 179 yellow
+
+Environments: gui 256
 
 Term colors: color00 color01 color02 color03 color04 color05 color06 color07
-Term colors: color08 color09 color10 color11 color12 color13 color14 color15
+             color08 color09 color10 color11 color12 color13 color14 color15
 
+
+Terminal          -> Normal
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+MessageWindow     -> Pmenu
+TabPanelFill      -> Normal
+TabPanel          -> Normal
+CurSearch         -> IncSearch
+PopupSelected     -> PmenuSel
+PopupNotification -> Normal
+LineNrAbove       -> LineNr
+LineNrBelow       -> LineNr
+CursorLineFold    -> FoldColumn
+CursorLineSign    -> FoldColumn
+PreInsert         -> NonText
 
 ;;; chrome
 
@@ -57,14 +82,19 @@ Normal           foreground background
 EndOfBuffer      color08    none
 Statusline       background color06
 StatuslineNC     foreground color08
-StatuslineTerm   background color06
-StatuslineTermNC foreground color08
-VertSplit        color08    color08
+VertSplit        color06    color06
+VertSplitNC      color08    color08
 
 Pmenu            none       color08
 PmenuSel         background color11
 PmenuSbar        none       color07
 PmenuThumb       none       color15
+PmenuKind        color01    color08
+PmenuKindSel     color01    color11
+PmenuExtra       color07    color08
+PmenuExtraSel    color07    color11
+PmenuMatch       color15    none bold
+PmenuMatchSel    color00    none bold
 
 TabLine          foreground color08
 TabLineFill      color06    color08
@@ -77,7 +107,10 @@ NonText          color08    none
 SpecialKey       color08    none
 
 Folded           color07    color00
-Visual           background color12
+Visual           color12    background reverse
+/gui             none       colorV
+/256+tgc true    omit       omit
+/8               color06    color00        reverse
 VisualNOS        background color12
 LineNr           color07    none
 FoldColumn       color07    none
@@ -97,23 +130,36 @@ MoreMsg          color10    none
 Question         color09    none
 
 Todo             color03    background reverse
-MatchParen       color00    color03
-Search           color00    color02
-IncSearch        color00    color11
+MatchParen       colorMP    none bold
+/8               none       none bold,underline
+Search           colorSrch  color00        reverse
+/gui             none       colorSrch
+/256+tgc true    omit       omit
+/8               color00    color02
+IncSearch        colorInc   color00        reverse
+/gui             none       colorInc
+/256+tgc true    omit       omit
+/8               color00    color03
 WildMenu         background color11
 ColorColumn      none       color00
 Cursor           color00    colorC
 lCursor          background color01
+TitleBar         color15    colorTitle
+TitleBarNC       color08    colorTitleNC
 
 DiffAdd          none       colorDiffA
 DiffChange       none       colorDiffC
 DiffText         color15    color03
 DiffDelete       color01    colorDiffD
 
-SpellBad         color01    none t=underline g=undercurl s=color01
-SpellCap         color09    none t=underline g=undercurl s=color09
-SpellLocal       color03    none t=underline g=undercurl s=color03
-SpellRare        color11    none t=underline g=undercurl s=color11
+SpellBad         color01    none underline
+/gui             none       none s=color01 undercurl
+SpellCap         color09    none underline
+/gui             none       none s=color09 undercurl
+SpellLocal       color03    none underline
+/gui             none       none s=color03 undercurl
+SpellRare        color11    none underline
+/gui             none       none s=color11 undercurl
 
 
 ;;; :h group-names
